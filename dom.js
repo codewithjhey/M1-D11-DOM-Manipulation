@@ -4,11 +4,20 @@ EX7: Write a function to change the h1 text to something else
 
 */
 
-document.getElementById("main-title")
-console.dir(h1)
+function changeH1Text() {
+  document.quarySelector("h1").innerText = "Luxuxy by Jay"
+}
 
 /*EX8: Write a function to change the page background color
+ */
 
+function changeBackgroundColor() {
+  document.querySelector("body").style.changeBackgroundColor = lightgreen
+}
+
+changeBackgroundColor()
+
+/*
 EX9: Write a function to change the footer address with a fake one
 
 EX10: Write a function to add a CSS class to every Amazon link

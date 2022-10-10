@@ -127,11 +127,16 @@ EX6: Add a message board where the user can type a message in it (no real postin
     </footer>
     <script>
       function changeH1Text() {
-        document.querySelectord("h1").innerText = "Luxuxy by Jay"
+        document.querySelector("h1").innerText = "Luxuxy by Jay"
       }
 
       function changeBackgroundColor() {
-        document.quarySelectord("body").style.changeBackgroundColor = lightgreen
+        document.querySelector("body").style.changeBackgroundColor = lightgreen
+      }
+
+      function changeFooterAddress() {
+        document.querySelector("footer > ").style.changeBackgroundColor =
+          lightgreen
       }
 
       src = "./dom.js"
