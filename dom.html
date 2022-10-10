@@ -123,11 +123,11 @@ EX6: Add a message board where the user can type a message in it (no real postin
     <textarea type="text" placeholder="Enter a message"></textarea>
     <footer>
       <div>HighFashion Luxury</div>
-      <div>Cottingham, Manchester, United Kingdom</div>
+      <div id="address">Cottingham, Manchester, United Kingdom</div>
     </footer>
     <script>
       function changeH1Text() {
-        document.querySelector("h1").innerText = "Luxuxy by Jay"
+        document.querySelector("h1").innerHTML = "Luxuxy by Jay"
       }
 
       function changeBackgroundColor() {
@@ -135,10 +135,12 @@ EX6: Add a message board where the user can type a message in it (no real postin
       }
 
       function changeFooterAddress() {
-        document.querySelector("footer > ").style.changeBackgroundColor =
-          lightgreen
+        document.querySelector("#address").InnerHTML = "Lekki, Lagos, Nigeria"
       }
 
+      function addClassToLinks() {
+        document.querySelector("a").classList.add("")
+      }
       src = "./dom.js"
     </script>
   </body>

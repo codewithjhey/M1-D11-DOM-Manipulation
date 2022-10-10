@@ -17,9 +17,13 @@ function changeBackgroundColor() {
 
 changeBackgroundColor()
 
-/*
-EX9: Write a function to change the footer address with a fake one
+//EX9: Write a function to change the footer address with a fake one
 
+function changeFooterAddress() {
+  document.querySelector("#address").InnerHTML = " Lekki, Lagos, Nigeria"
+}
+
+/*
 EX10: Write a function to add a CSS class to every Amazon link
 
 EX11: Write a function to toggle a CSS class for all the images in the table; that class should set the visibility of the image
