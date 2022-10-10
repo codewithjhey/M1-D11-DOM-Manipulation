@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM Manipulation</title>
+    <title>JS+DOM Manipulation</title>
   </head>
   <body>
-    <h1>HighFashion Luxury</h1>
+    <!-- EX1: Add an h1 tag with the name of your shop
+EX2: Add a TABLE with the top 5 products of your shop
+EX3: Insert for each product an image, a title, a description and a price
+EX4: Add links to existing Amazon products for each item in the table
+EX5: Add a footer with the address and the name of your shop
+EX6: Add a message board where the user can type a message in it (no real posting/saving features required!) -->
+    <h1 id="main-title">HighFashion Luxury</h1>
 
     <table>
       <tr>
@@ -19,52 +25,116 @@
       </tr>
       <tr>
         <td>Product 1</td>
-        <td>Gucci T-shirt</td>
-        <td>Insert Image</td>
-        <td>Nice fitted shirt from Gucci</td>
-        <td>$600</td>
+        <td>
+          Gucci T-shirt<span
+            ><br /><a
+              href="https://www.gucci.com/us/en/pr/women/ready-to-wear-for-women/t-shirts-and-sweatshirts-for-women/t-shirts-for-women/gucci-lovelight-cotton-t-shirt-with-print-p-706124XJERK9150?ranMID=37490&ranEAID=*2nGiS3mv0Y&ranSiteID=.2nGiS3mv0Y-GGyISWl7SF_Gu12Ewyo4Tg&utm_source=*2nGiS3mv0Y&utm_medium=affiliates&utm_campaign=1&utm_content=10&utm_term=*2nGiS3mv0Y&siteID=.2nGiS3mv0Y-GGyISWl7SF_Gu12Ewyo4Tg"
+              >Buy Now</a
+            ></span
+          >
+        </td>
+        <td><img src="./gucci shirt.jpg" alt="gucci shirt" /></td>
+        <td>
+          <p>Nice fitted shirt from Gucci, lovely and charming at sight.</p>
+        </td>
+        <td>$300</td>
       </tr>
       <tr>
         <td>Product 2</td>
-        <td>Versace Jeans</td>
-        <td>Insert</td>
         <td>
-          In a regular fit, these straight-leg jeans have a five-pocket design.
+          Versace Jeans<span
+            ><br /><a
+              href="https://www.farfetch.com/uk/shopping/women/versace-medusa-head-logo-skinny-jeans-item-17321841.aspx"
+              >Buy Now</a
+            ></span
+          >
+        </td>
+        <td><img src="./versace jean.jpg" alt="versace jean" /></td>
+        <td>
+          <p>
+            In a regular fit, these straight-leg jeans have a five-pocket
+            design.
+          </p>
         </td>
         <td>$447</td>
       </tr>
       <tr>
         <td>Product 3</td>
-        <td>Space Courture Shirt</td>
-        <td>Insert</td>
         <td>
-          In a boxy fit, this long-sleeved shirt has an all-over Space Couture
-          print.
+          Space Courture Shirt<span
+            ><br /><a
+              href="https://www.truffleshuffle.co.uk/product/33944/et-space-print-button-up-shirt-from-cakeworthy"
+              >Buy Now</a
+            ></span
+          >
+        </td>
+        <td><img src="./space shirt.jpg" alt="space shirt" /></td>
+        <td>
+          <p>
+            In a boxy fit, this long-sleeved shirt has an all-over Space Couture
+            print.
+          </p>
         </td>
         <td>$672</td>
       </tr>
       <tr>
         <td>Product 4</td>
-        <td>Logo Couture Jumper</td>
-        <td>Insert Image</td>
         <td>
-          Made from cotton, this long-sleeved jumper has a crewneck and features
-          an all-over Logo Couture print.
+          Logo Couture Jumper<span
+            ><br /><a href="https://www.next.co.uk/g63518s4/u30109#u30109/"
+              >Buy Now</a
+            ></span
+          >
+        </td>
+        <td>
+          <img
+            src="https://xcdn.next.co.uk/COMMON/Items/Default/Default/Publications/G63/shotview/518/U30-109s.jpg"
+            alt="jumper top"
+          />
+        </td>
+        <td>
+          <p>
+            Made from cotton, this long-sleeved jumper has a crewneck and
+            features an all-over Logo Couture print.
+          </p>
         </td>
         <td>$350</td>
       </tr>
       <tr>
         <td>Product 5</td>
-        <td>Piece Number Logo Hoodie (Purple)</td>
-        <td>Insert Image</td>
         <td>
-          Made from cotton jersey, this hooded sweatshirt has an oversized fit
-          with a Piece Number logo at the front.
+          Piece Number Logo Hoodie (Purple)<span
+            ><br /><a
+              href="https://www.versace.com/gb/en-gb/jeans-couture/men/clothing/piece-number-logo-hoodie-e337/E73GAIT23-ECF00O_E337.html?cgid=12000001#start=1"
+              >Buy Now</a
+            ></span
+          >
+        </td>
+        <td><img src="./purple hoodie.jpg.webp" alt="purple hoodie" /></td>
+        <td>
+          <p>
+            Made from cotton jersey, this hooded sweatshirt has an oversized fit
+            with a Piece Number logo at the front.
+          </p>
         </td>
         <td>$360</td>
       </tr>
     </table>
+    <textarea type="text" placeholder="Enter a message"></textarea>
+    <footer>
+      <div>HighFashion Luxury</div>
+      <div>Cottingham, Manchester, United Kingdom</div>
+    </footer>
+    <script>
+      function changeH1Text() {
+        document.querySelectord("h1").innerText = "Luxuxy by Jay"
+      }
 
-    <script src="./dom.js"></script>
+      function changeBackgroundColor() {
+        document.quarySelectord("body").style.changeBackgroundColor = lightgreen
+      }
+
+      src = "./dom.js"
+    </script>
   </body>
 </html>
