@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>JS+DOM Manipulation</title>
   </head>
   <body>
@@ -19,9 +20,9 @@ EX6: Add a message board where the user can type a message in it (no real postin
       <tr>
         <th>Top 5 Products</th>
         <th>Title</th>
-        <th>Image</th>
         <th>Description</th>
         <th>Price</th>
+        <th>Image</th>
       </tr>
       <tr>
         <td>Product 1</td>
@@ -33,11 +34,13 @@ EX6: Add a message board where the user can type a message in it (no real postin
             ></span
           >
         </td>
-        <td><img src="./gucci shirt.jpg" alt="gucci shirt" /></td>
         <td>
           <p>Nice fitted shirt from Gucci, lovely and charming at sight.</p>
         </td>
         <td>$300</td>
+        <td>
+          <img src="./gucci shirt.jpg" alt="gucci shirt" />
+        </td>
       </tr>
       <tr>
         <td>Product 2</td>
@@ -49,7 +52,6 @@ EX6: Add a message board where the user can type a message in it (no real postin
             ></span
           >
         </td>
-        <td><img src="./versace jean.jpg" alt="versace jean" /></td>
         <td>
           <p>
             In a regular fit, these straight-leg jeans have a five-pocket
@@ -57,6 +59,7 @@ EX6: Add a message board where the user can type a message in it (no real postin
           </p>
         </td>
         <td>$447</td>
+        <td><img src="./versace jean.jpg" alt="versace jean" /></td>
       </tr>
       <tr>
         <td>Product 3</td>
@@ -68,7 +71,6 @@ EX6: Add a message board where the user can type a message in it (no real postin
             ></span
           >
         </td>
-        <td><img src="./space shirt.jpg" alt="space shirt" /></td>
         <td>
           <p>
             In a boxy fit, this long-sleeved shirt has an all-over Space Couture
@@ -76,6 +78,7 @@ EX6: Add a message board where the user can type a message in it (no real postin
           </p>
         </td>
         <td>$672</td>
+        <td><img src="./space shirt.jpg" alt="space shirt" /></td>
       </tr>
       <tr>
         <td>Product 4</td>
@@ -87,18 +90,18 @@ EX6: Add a message board where the user can type a message in it (no real postin
           >
         </td>
         <td>
-          <img
-            src="https://xcdn.next.co.uk/COMMON/Items/Default/Default/Publications/G63/shotview/518/U30-109s.jpg"
-            alt="jumper top"
-          />
-        </td>
-        <td>
           <p>
             Made from cotton, this long-sleeved jumper has a crewneck and
             features an all-over Logo Couture print.
           </p>
         </td>
         <td>$350</td>
+        <td>
+          <img
+            src="https://xcdn.next.co.uk/COMMON/Items/Default/Default/Publications/G63/shotview/518/U30-109s.jpg"
+            alt="jumper top"
+          />
+        </td>
       </tr>
       <tr>
         <td>Product 5</td>
@@ -110,7 +113,6 @@ EX6: Add a message board where the user can type a message in it (no real postin
             ></span
           >
         </td>
-        <td><img src="./purple hoodie.jpg.webp" alt="purple hoodie" /></td>
         <td>
           <p>
             Made from cotton jersey, this hooded sweatshirt has an oversized fit
@@ -118,6 +120,7 @@ EX6: Add a message board where the user can type a message in it (no real postin
           </p>
         </td>
         <td>$360</td>
+        <td><img src="./purple hoodie.jpg.webp" alt="purple hoodie" /></td>
       </tr>
     </table>
     <textarea type="text" placeholder="Enter a message"></textarea>
@@ -131,17 +134,41 @@ EX6: Add a message board where the user can type a message in it (no real postin
       }
 
       function changeBackgroundColor() {
-        document.querySelector("body").style.changeBackgroundColor = lightgreen
+        document.querySelector("body").style.backgroundColor = "lightblue"
       }
 
       function changeFooterAddress() {
-        document.querySelector("#address").InnerHTML = "Lekki, Lagos, Nigeria"
+        document.querySelector("footer > div:nth-child(2)").InnerHTML =
+          "Lekki, Lagos, Nigeria This is a fake address Lol"
       }
 
       function addClassToLinks() {
-        document.querySelector("a").classList.add("")
+        for (let node of document.querySelectorAll("span")) {
+          node.classList.add("big-font")
+        }
       }
-      src = "./dom.js"
+
+      function toggleClassOfImg() {
+        for (let image of document.querySelectorAll("img")) {
+          image.classList.toggle("hidden")
+        }
+      }
+
+      function setPriceColor() {
+        const color = getPriceColor()
+
+        for (let price of document.querySelectorAll("tr > td:nth-child(4)")) {
+          price.style.color = color
+        }
+      }
+
+      function getPriceColor() {
+        const red = Math.round(Math.random() * 255)
+        const green = Math.round(Math.random() * 255)
+        const blue = Math.round(Math.random() * 255)
+
+        return "rgb(" + red + ", " + green + ", " + blue + ")"
+      }
     </script>
   </body>
 </html>
